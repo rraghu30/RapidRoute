@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl;
+  }
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+  
+  /* Dark Mode Overrides */
+  .dark-theme body {
+    @apply bg-slate-900 text-slate-200;
+  }
+  .dark-theme .glass-card {
+    @apply bg-slate-800/90 border-slate-700 text-slate-200 shadow-md;
+  }
+  .dark-theme .glass-card h1,
+  .dark-theme .glass-card h2,
+  .dark-theme .glass-card h3,
+  .dark-theme .glass-card h4,
+  .dark-theme .glass-card p,
+  .dark-theme .glass-card span {
+    @apply text-slate-200;
+  }
+  .dark-theme header,
+  .dark-theme nav {
+    @apply bg-slate-900/90 border-slate-800;
+  }
+  .dark-theme header h2,
+  .dark-theme nav h1 {
+    @apply text-white;
+  }
+  .dark-theme header input {
+    @apply bg-slate-800 border-slate-700 text-white placeholder-slate-400;
+  }
+  .dark-theme .bg-white {
+    @apply bg-slate-800;
+  }
+  .dark-theme .bg-slate-50 {
+    @apply bg-slate-900;
+  }
+  .dark-theme .bg-emerald-50 {
+    @apply bg-emerald-900/40;
+  }
+  .dark-theme .bg-emerald-100 {
+    @apply bg-emerald-900/40;
+  }
+  .dark-theme .bg-blue-100 {
+    @apply bg-blue-900/40;
+  }
+  .dark-theme .bg-indigo-100 {
+    @apply bg-indigo-900/40;
+  }
+  .dark-theme .bg-green-100 {
+    @apply bg-green-900/40;
+  }
+  .dark-theme .bg-slate-100 {
+    @apply bg-slate-800;
+  }
+  .dark-theme .bg-blue-50 {
+    @apply bg-blue-900/40;
+  }
+  .dark-theme .bg-amber-100 {
+    @apply bg-amber-900/40;
+  }
+  .dark-theme .bg-red-100 {
+    @apply bg-red-900/40;
+  }
+  .dark-theme .bg-purple-100 {
+    @apply bg-purple-900/40;
+  }
+  .dark-theme .border-slate-200 {
+    @apply border-slate-700;
+  }
+  .dark-theme .border-slate-100 {
+    @apply border-slate-800;
+  }
+  .dark-theme .border-brand-100 {
+    @apply border-brand-900/50;
+  }
+  .dark-theme .border-emerald-100 {
+    @apply border-emerald-800/50;
+  }
+  .dark-theme .border-blue-200 {
+    @apply border-blue-800/50;
+  }
+  .dark-theme .border-amber-200 {
+    @apply border-amber-800/50;
+  }
+  .dark-theme .border-emerald-200 {
+    @apply border-emerald-800/50;
+  }
+  .dark-theme .border-red-200 {
+    @apply border-red-800/50;
+  }
+  .dark-theme .border-purple-200 {
+    @apply border-purple-800/50;
+  }
+  .dark-theme .text-slate-800 {
+    @apply text-slate-100;
+  }
+  .dark-theme .text-slate-500 {
+    @apply text-slate-400;
+  }
+  .dark-theme .text-slate-600 {
+    @apply text-slate-300;
+  }
+  .dark-theme .text-slate-700 {
+    @apply text-slate-200;
+  }
+  .dark-theme .text-slate-900 {
+    @apply text-white;
+  }
+  .dark-theme .text-brand-950 {
+    @apply text-slate-100;
+  }
+  .dark-theme .text-brand-600 {
+    @apply text-brand-500;
+  }
+  .dark-theme .text-brand-700 {
+    @apply text-brand-500;
+  }
+  .dark-theme .text-blue-600 {
+    @apply text-blue-400;
+  }
+  .dark-theme .text-emerald-600 {
+    @apply text-emerald-400;
+  }
+  .dark-theme .text-indigo-600 {
+    @apply text-indigo-400;
+  }
+  .dark-theme .text-green-600 {
+    @apply text-green-400;
+  }
+  .dark-theme .text-blue-700 {
+    @apply text-blue-400;
+  }
+  .dark-theme .text-amber-700 {
+    @apply text-amber-400;
+  }
+  .dark-theme .text-emerald-700 {
+    @apply text-emerald-400;
+  }
+  .dark-theme .text-red-700 {
+    @apply text-red-400;
+  }
+  .dark-theme .text-purple-700 {
+    @apply text-purple-400;
+  }
+  .dark-theme .bg-brand-50 {
+    @apply bg-brand-900/40;
+  }
+  .dark-theme select {
+    @apply bg-slate-800 border-slate-700 text-white;
+  }
+  
+  /* Density Overrides */
+  .density-compact .glass-card {
+    @apply p-4 rounded-xl;
+  }
+  .density-compact h1 {
+    @apply text-2xl;
+  }
+  .density-compact h2 {
+    @apply text-lg;
+  }
+  .density-compact p, .density-compact span {
+    @apply text-sm;
+  }
+  .density-compact header {
+    @apply h-14;
+  }
+}
